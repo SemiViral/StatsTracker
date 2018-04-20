@@ -31,7 +31,7 @@ namespace StatsTracker.Model {
         #endregion
     }
 
-    public class Stat<T> : Stat where T : Type {
+    public class Stat<T> : Stat {
         #region MEMBERS
 
         /// <summary>

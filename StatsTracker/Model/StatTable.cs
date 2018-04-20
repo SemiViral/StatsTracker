@@ -8,15 +8,14 @@ namespace StatsTracker.Model {
 
         public string Name { get; set; }
         public DateTime Creation { get; }
-        public List<StatLine> StatisticLines { get; }
+        public List<StatLine> StatisticLines { get; set; }
 
         #endregion
 
-        public StatTable(string name, IEnumerable<StatLine> statLines) {
+        public StatTable(string name) {
             Creation = DateTime.Now;
 
             Name = name;
-            StatisticLines = statLines.ToList();
         }
     }
 }
