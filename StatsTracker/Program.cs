@@ -7,7 +7,13 @@ namespace StatsTracker {
         }
 
         public static string GetUserInput() {
-            return string.Empty;
+            string rawInput = string.Empty;
+
+            do {
+                rawInput = Console.ReadLine();
+            } while (string.IsNullOrWhiteSpace(rawInput));
+
+            return rawInput;
         }
     }
 }
