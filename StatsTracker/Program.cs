@@ -57,7 +57,12 @@ namespace StatsTracker {
         }
 
         private static void CreateTableFromValues(string[] parsedInputValues) {
+            if (!parsedInputValues[0].ToLower().Equals("create"))
+                return;
 
+            StatTable table = new StatTable(string.Empty);
+
+            table.Name = parsedInputValues[1].Contains(":") ? string.Empty : parsedInputValues[1];
         }
 
         private static void DeleteTable(StatTable table) {
