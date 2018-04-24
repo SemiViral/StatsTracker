@@ -49,6 +49,14 @@ namespace StatsTracker {
         }
 
         private static void CreateTable(string inputValues) {
+            CreateTableFromValues(inputValues.Split(" "));
+        }
+
+        private static void CreateTable(string[] inputValues) {
+            CreateTableFromValues(inputValues);
+        }
+
+        private static void CreateTableFromValues(string[] parsedInputValues) {
 
         }
 
