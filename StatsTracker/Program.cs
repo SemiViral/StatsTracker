@@ -29,5 +29,9 @@ namespace StatsTracker {
 
             return rawInput;
         }
+
+        public static void ParseUserInput(string userInput) {
+
+        }
     }
 }
