@@ -56,6 +56,14 @@ namespace StatsTracker {
 
         }
 
+        private static void ModifyTable(StatTable table) {
+
+        }
+
+        private static void ViewTable(StatTable table) {
+
+        }
+
         private static StatTable GetTable(string tableName) {
             return Tables.SingleOrDefault(table => table.Name.Equals(tableName));
         }
