@@ -31,7 +31,20 @@ namespace StatsTracker {
         }
 
         public static void ParseUserInput(string userInput) {
+            string[] userInputSplit = userInput.Split(" ");
 
+            switch (userInputSplit[0]) {
+                case "create":
+                    break;
+                case "delete":
+                    break;
+                case "view":
+                    break;
+                case "modify":
+                    break;
+                default:
+                    break;
+            }
         }
     }
 }
