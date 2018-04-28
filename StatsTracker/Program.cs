@@ -66,7 +66,10 @@ namespace StatsTracker {
         }
 
         private static void DeleteTable(StatTable table) {
+            if (GetTable(table.Name) == null)
+                return;
 
+            Tables.Remove(table);
         }
 
         private static void ModifyTable(StatTable table) {
