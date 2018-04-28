@@ -11,6 +11,12 @@ namespace StatsTracker {
 
         #endregion
 
+        #region EVENTS
+
+        public event EventHandler<TableDeletedEventArgs> TableDeleted;
+
+        #endregion
+
         public static void Main(string[] args) {
             Tables = new List<StatTable>();
 
