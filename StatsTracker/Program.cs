@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using StatsTracker.ComponentModel.Event;
 using StatsTracker.Model;
 
 namespace StatsTracker {
@@ -8,12 +9,6 @@ namespace StatsTracker {
         #region MEMBERS
 
         private static List<StatTable> Tables { get; set; }
-
-        #endregion
-
-        #region EVENTS
-
-        public event EventHandler<TableDeletedEventArgs> TableDeleted;
 
         #endregion
 
@@ -78,16 +73,25 @@ namespace StatsTracker {
             Tables.Remove(table);
         }
 
-        private static void ModifyTable(StatTable table) {
+        private static void ModifyTable(StatTable table) { }
 
-        }
-
-        private static void ViewTable(StatTable table) {
-
-        }
+        private static void ViewTable(StatTable table) { }
 
         private static StatTable GetTable(string tableName) {
             return Tables.SingleOrDefault(table => table.Name.Equals(tableName));
         }
+
+        #region EVENTS
+
+        public event EventHandler<TableDeletedEventArgs> TableDeleted;
+
+        private void OnTableDeleted(object sender, TableDeletedEventArgs args) {
+            if (TableDeleted == null)
+                return;
+
+            TableDeleted.Invoke(sender, args);
+        }
+
+        #endregion
     }
 }
