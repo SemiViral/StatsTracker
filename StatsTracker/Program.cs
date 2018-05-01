@@ -73,7 +73,7 @@ namespace StatsTracker {
             Tables.Remove(table);
         }
 
-        private static void ModifyTable(StatTable table) { }
+        private static void ModifyStat(StatTable table) { }
 
         private static void ViewTable(StatTable table) { }
 
@@ -93,9 +93,5 @@ namespace StatsTracker {
         }
 
         #endregion
-    }
-
-    public enum TableModificationType {
-
     }
 }
