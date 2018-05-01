@@ -94,4 +94,8 @@ namespace StatsTracker {
 
         #endregion
     }
+
+    public enum TableModificationType {
+
+    }
 }
