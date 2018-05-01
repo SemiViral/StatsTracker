@@ -74,7 +74,7 @@ namespace StatsTracker {
         }
 
         private static void ModifyStat(string statLineId, string statName) {
-
+            
         }
 
         private static void ViewTable(StatTable table) { }

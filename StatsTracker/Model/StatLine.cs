@@ -11,7 +11,7 @@ namespace StatsTracker.Model {
         public DateTime Creation { get; }
         public DateTime Updated { get; private set; }
 
-        private ReadOnlyCollection<Stat> Statistics { get; }
+        public ReadOnlyCollection<Stat> Statistics { get; }
 
         #endregion
 
