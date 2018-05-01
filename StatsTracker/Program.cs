@@ -73,8 +73,18 @@ namespace StatsTracker {
             Tables.Remove(table);
         }
 
-        private static void ModifyStat(string statLineId, string statName) {
-            
+        private static void ModifyStat(string tableName, int statLineId, string statName) {
+            StatTable selectedTable = Tables.SingleOrDefault(table => table.Name.Equals(tableName));
+            if (selectedTable == null)
+                return;
+
+            StatLine selectedLine = selectedTable.StatisticLines.OrderBy(line => line.Creation).ToList()[statLineId];
+            if (selectedLine == null)
+                return;
+
+            Stat selectedStat = selectedLine.Statistics.SingleOrDefault(stat => stat.Name.Equals(statName));
+            if (selectedStat == null)
+                return;
         }
 
         private static void ViewTable(StatTable table) { }
