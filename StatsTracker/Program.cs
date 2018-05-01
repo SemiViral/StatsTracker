@@ -73,7 +73,9 @@ namespace StatsTracker {
             Tables.Remove(table);
         }
 
-        private static void ModifyStat(StatTable table) { }
+        private static void ModifyStat(string statLineId, string statName) {
+
+        }
 
         private static void ViewTable(StatTable table) { }
 
