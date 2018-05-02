@@ -73,7 +73,7 @@ namespace StatsTracker {
             Tables.Remove(table);
         }
 
-        private static void ModifyStat(string tableName, int statLineId, string statName) {
+        private static void ModifyStat(string tableName, int statLineId, string statName, object newValue) {
             StatTable selectedTable = Tables.SingleOrDefault(table => table.Name.Equals(tableName));
             if (selectedTable == null)
                 return;
