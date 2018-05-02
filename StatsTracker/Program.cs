@@ -95,7 +95,11 @@ namespace StatsTracker {
             Console.WriteLine($"Value of {selectedTable.Name}:{selectedLine.Creation}:{selectedStat.Name} changed to {newValue}");
         }
 
-        private static void ViewTable(StatTable table) { }
+        private static void ViewTable(StatTable table) {
+            foreach (StatLine lines in table.StatisticLines) {
+                Console.WriteLine(string.Join(" ", lines.Statistics.OrderBy(stat => stat.Ordering)));
+            }
+        }
 
         private static StatTable GetTable(string tableName) {
             return Tables.SingleOrDefault(table => table.Name.Equals(tableName));
