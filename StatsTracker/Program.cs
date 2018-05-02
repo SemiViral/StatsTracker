@@ -85,6 +85,9 @@ namespace StatsTracker {
             Stat selectedStat = selectedLine.Statistics.SingleOrDefault(stat => stat.Name.Equals(statName));
             if (selectedStat == null)
                 return;
+
+            if (selectedStat.Value.Equals(newValue))
+                return;
         }
 
         private static void ViewTable(StatTable table) { }
