@@ -9,7 +9,7 @@ namespace StatsTracker.Model {
         #region MEMBERS
 
         public DateTime Creation { get; }
-        public DateTime Updated { get; private set; }
+        public DateTime Updated { get; set; }
 
         public ReadOnlyCollection<Stat> Statistics { get; }
 

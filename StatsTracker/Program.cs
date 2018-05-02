@@ -90,6 +90,7 @@ namespace StatsTracker {
                 return;
 
             selectedStat.Value = newValue;
+            selectedLine.Updated = DateTime.Now;
 
             Console.WriteLine($"Value of {selectedTable.Name}:{selectedLine.Creation}:{selectedStat.Name} changed to {newValue}");
         }
