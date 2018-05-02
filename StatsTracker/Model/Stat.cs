@@ -7,7 +7,7 @@ namespace StatsTracker.Model {
 
         public int Ordering { get; }
         public string Name { get; }
-        protected object Value;
+        public object Value;
 
         #endregion
 
