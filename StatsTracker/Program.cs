@@ -88,6 +88,10 @@ namespace StatsTracker {
 
             if (selectedStat.Value.Equals(newValue))
                 return;
+
+            selectedStat.Value = newValue;
+
+            Console.WriteLine($"Value of {selectedTable.Name}:{selectedLine.Creation}:{selectedStat.Name} changed to {newValue}");
         }
 
         private static void ViewTable(StatTable table) { }
